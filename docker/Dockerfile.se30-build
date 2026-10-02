@@ -1,0 +1,6 @@
+FROM debian:sid
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+    gcc libc6-dev gcc-m68k-linux-gnu binutils-m68k-linux-gnu make bc bison flex libssl-dev libelf-dev \
+    kmod cpio xz-utils gzip python3 perl rsync file ca-certificates curl \
+    hfsutils parted e2fsprogs qemu-system-misc unar fdisk debian-ports-archive-keyring mmdebstrap arch-test \
+    && rm -rf /var/lib/apt/lists/*

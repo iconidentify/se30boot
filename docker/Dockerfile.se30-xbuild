@@ -1,0 +1,4 @@
+FROM se30-build
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+    autoconf automake libtool xutils-dev pkgconf bzip2 \
+    && rm -rf /var/lib/apt/lists/*
